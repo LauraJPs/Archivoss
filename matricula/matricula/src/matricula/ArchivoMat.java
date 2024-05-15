@@ -47,7 +47,13 @@ public class ArchivoMat {
             System.out.println("Número de Créditos Materia: ");
             dato = reader.readLine();
             cadena = cadena + dato + "#";
-            System.out.println("Horario Materia: ");
+            System.out.println("Horario 1 Materia: ");
+            dato = reader.readLine();
+            cadena = cadena + dato + "#";
+            System.out.println("Horario 2 Materia: ");
+            dato = reader.readLine();
+            cadena = cadena + dato + "#";
+            System.out.println("Cupos Materia: ");
             dato = reader.readLine();
             cadena = cadena + dato + "#";
             //System.out.println("Grupo Materia: ");

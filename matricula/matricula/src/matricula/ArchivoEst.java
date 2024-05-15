@@ -56,13 +56,13 @@ public class ArchivoEst {
             System.out.println("Apellido: ");
             dato = reader.readLine();
             cadena = cadena + dato + "#";
-            System.out.println("Número de créditos: ");
+            System.out.println("Correo: ");
             dato = reader.readLine();
             cadena = cadena + dato + "#";
-            System.out.println("Promedio: ");
+            //System.out.println("Promedio: ");
             //double promedio = Double.parseDouble(reader.readLine());
-            dato = reader.readLine();
-            cadena = cadena + dato + "#";
+            //dato = reader.readLine();
+            //cadena = cadena + dato + "#";
             linea.println(cadena);
             //BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo, true));
             //writer.write(cadena);
