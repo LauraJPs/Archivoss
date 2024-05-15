@@ -1,0 +1,6 @@
+Juan;Diaz;jDiaz@correo.com;
+Ana;Rodriguez;Arodriguez@correo.com;
+Diana;Nieto;Dnieto@correo.co;
+a;a;a@
+b;b;b@
+c;c;c@
