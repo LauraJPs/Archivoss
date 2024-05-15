@@ -15,11 +15,6 @@ public class Materia extends javax.swing.JFrame {
      */
     public Materia() {
         initComponents();
-        formMaterias formMat=new formMat();
-        CorreoLB2.setText(usuari.getCorreo());
-        TipoCuentaLB2.setText(usuari.getTipoDeCuenta());
-        TelefonoLB2.setText(usuari.getTelefono());
-        this.usu = usuari;
     }
 
     /**

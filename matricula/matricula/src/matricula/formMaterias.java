@@ -271,9 +271,7 @@ public class formMaterias extends javax.swing.JFrame {
     }//GEN-LAST:event_mat10ActionPerformed
 
     private void siguienteBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBTActionPerformed
-        if(mat1.isSelected()){
-            codMatLB2.setText(1);
-        }
+        
         Materia mat=new Materia();
        this.setVisible(false);
        mat.setVisible(true);
