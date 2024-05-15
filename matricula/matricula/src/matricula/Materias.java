@@ -12,18 +12,21 @@ public class Materias {
     private int codMat;
     private String nombreMat;
     private int numCredMat;
-    private String horMat;
-    //private int grupoMat;
-
+    private String horMat1;
+    private String horMat2;
+    private int numCup;
     public Materias() {
     }
     
 
-    public Materias(int codMat, String nombreMat, int numCredMat, String horMat) {
+    public Materias(int codMat, String nombreMat, int numCredMat, String horMat1,String horMat2, int numCup) {
+        this.codMat= codMat;
         this.nombreMat = nombreMat;
         this.numCredMat = numCredMat;
-        this.horMat = horMat;
-        this.codMat= codMat;
+        this.horMat1 = horMat1;
+        this.horMat2=horMat2;
+        this.numCup=numCup;
+        
     }
 
     public int getCodMat() {
@@ -50,13 +53,31 @@ public class Materias {
         this.numCredMat = numCredMat;
     }
 
-    public String getHorMat() {
-        return horMat;
+    public String getHorMat1() {
+        return horMat1;
     }
 
-    public void setHorMat(String horMat) {
-        this.horMat = horMat;
+    public void setHorMat1(String horMat1) {
+        this.horMat1 = horMat1;
     }
+
+    public String getHorMat2() {
+        return horMat2;
+    }
+
+    public void setHorMat2(String horMat2) {
+        this.horMat2 = horMat2;
+    }
+
+    public int getNumCup() {
+        return numCup;
+    }
+
+    public void setNumCup(int numCup) {
+        this.numCup = numCup;
+    }
+
+    
     
     
 }
