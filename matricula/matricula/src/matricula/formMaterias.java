@@ -4,6 +4,8 @@
  */
 package matricula;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jimena
@@ -13,6 +15,7 @@ public class formMaterias extends javax.swing.JFrame {
     /**
      * Creates new form formMaterias
      */
+    
     public formMaterias() {
         initComponents();
         botonGrupMat.add(mat1);
@@ -27,7 +30,9 @@ public class formMaterias extends javax.swing.JFrame {
         botonGrupMat.add(mat11);
         
     }
-
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,8 +56,8 @@ public class formMaterias extends javax.swing.JFrame {
         mat8 = new javax.swing.JRadioButton();
         mat11 = new javax.swing.JRadioButton();
         mat10 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        siguienteBT = new javax.swing.JButton();
+        terminarBT = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -127,17 +132,17 @@ public class formMaterias extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Siguiente");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        siguienteBT.setText("Siguiente");
+        siguienteBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                siguienteBTActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Terminar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        terminarBT.setText("Terminar");
+        terminarBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                terminarBTActionPerformed(evt);
             }
         });
 
@@ -170,9 +175,9 @@ public class formMaterias extends javax.swing.JFrame {
                         .addContainerGap(111, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jButton2)
+                        .addComponent(terminarBT)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(siguienteBT)
                         .addGap(64, 64, 64))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -204,8 +209,8 @@ public class formMaterias extends javax.swing.JFrame {
                     .addComponent(mat5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(terminarBT)
+                    .addComponent(siguienteBT))
                 .addGap(36, 36, 36))
         );
 
@@ -265,13 +270,26 @@ public class formMaterias extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mat10ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void siguienteBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBTActionPerformed
+        if(mat1.isSelected()){
+            codMatLB2.setText(1);
+        }
+        Materia mat=new Materia();
+       this.setVisible(false);
+       mat.setVisible(true);
+       
+       
+    }//GEN-LAST:event_siguienteBTActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void terminarBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarBTActionPerformed
+       MostrarHorario mosHor=new MostrarHorario();
+       int r = JOptionPane.showConfirmDialog(null, "¿Desea terminar el proceso de matricula de materias?");
+        if (r == 0) {
+            this.setVisible(false);
+            mosHor.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_terminarBTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,8 +328,6 @@ public class formMaterias extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup botonGrupMat;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
@@ -325,5 +341,7 @@ public class formMaterias extends javax.swing.JFrame {
     private javax.swing.JRadioButton mat7;
     private javax.swing.JRadioButton mat8;
     private javax.swing.JRadioButton mat9;
+    private javax.swing.JButton siguienteBT;
+    private javax.swing.JButton terminarBT;
     // End of variables declaration//GEN-END:variables
 }

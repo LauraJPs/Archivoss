@@ -15,6 +15,11 @@ public class Materia extends javax.swing.JFrame {
      */
     public Materia() {
         initComponents();
+        formMaterias formMat=new formMat();
+        CorreoLB2.setText(usuari.getCorreo());
+        TipoCuentaLB2.setText(usuari.getTipoDeCuenta());
+        TelefonoLB2.setText(usuari.getTelefono());
+        this.usu = usuari;
     }
 
     /**
@@ -27,41 +32,58 @@ public class Materia extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        titMatLB = new javax.swing.JLabel();
+        numCredLB = new javax.swing.JLabel();
+        codMatLB = new javax.swing.JLabel();
+        horarioLB = new javax.swing.JLabel();
+        horarioCB = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel5 = new javax.swing.JLabel();
+        horario2TF = new javax.swing.JTextArea();
+        cupEstLB = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        horario1TF = new javax.swing.JTextArea();
+        guardarBT = new javax.swing.JButton();
+        codMatLB2 = new javax.swing.JLabel();
+        numCredLB2 = new javax.swing.JLabel();
+        cupEstLB2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Materia");
+        titMatLB.setFont(new java.awt.Font("Eras Bold ITC", 0, 36)); // NOI18N
+        titMatLB.setText("Materia");
 
-        jLabel2.setText("Numero de créditos Materia: ");
+        numCredLB.setText("Número de créditos Materia: ");
 
-        jLabel3.setText("Código Materia: ");
+        codMatLB.setText("Código Materia: ");
 
-        jLabel4.setText(" Horario: ");
+        horarioLB.setText(" Horario: ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        horarioCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "" }));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Horario 2: \n\nDe acuerdo al grupo elegido muestra el horario ");
-        jScrollPane1.setViewportView(jTextArea1);
+        horario2TF.setColumns(20);
+        horario2TF.setRows(5);
+        horario2TF.setText("Horario 2: \n\nMuestra el horario 2 de la materia");
+        jScrollPane1.setViewportView(horario2TF);
 
-        jLabel5.setText("Cupo de estudiantes Materia: ");
+        cupEstLB.setText("Cupo de estudiantes Materia: ");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("Horario 1: \n\nDe acuerdo al grupo elegido muestra el horario ");
-        jScrollPane2.setViewportView(jTextArea2);
+        horario1TF.setColumns(20);
+        horario1TF.setRows(5);
+        horario1TF.setText("Horario 1: \n\nMuestra el horario 1 de la materia ");
+        jScrollPane2.setViewportView(horario1TF);
+
+        guardarBT.setText("Guardar");
+        guardarBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarBTActionPerformed(evt);
+            }
+        });
+
+        codMatLB2.setText("cod");
+
+        numCredLB2.setText("num");
+
+        cupEstLB2.setText("cup");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,63 +92,85 @@ public class Materia extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(cupEstLB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cupEstLB2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(codMatLB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(codMatLB2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(numCredLB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(numCredLB2))
+                    .addComponent(titMatLB)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(horarioLB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(horarioCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(356, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(53, 53, 53)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(366, Short.MAX_VALUE)))
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(guardarBT)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel1)
+                .addComponent(titMatLB)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(codMatLB)
+                    .addComponent(codMatLB2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(257, Short.MAX_VALUE)
+                    .addComponent(numCredLB)
+                    .addComponent(numCredLB2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cupEstLB)
+                    .addComponent(cupEstLB2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(horarioLB)
+                    .addComponent(horarioCB, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(51, 51, 51)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(guardarBT, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 35, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void guardarBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarBTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarBTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,16 +208,20 @@ public class Materia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel codMatLB;
+    private javax.swing.JLabel codMatLB2;
+    private javax.swing.JLabel cupEstLB;
+    private javax.swing.JLabel cupEstLB2;
+    private javax.swing.JButton guardarBT;
+    private javax.swing.JTextArea horario1TF;
+    private javax.swing.JTextArea horario2TF;
+    private javax.swing.JComboBox<String> horarioCB;
+    private javax.swing.JLabel horarioLB;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JLabel numCredLB;
+    private javax.swing.JLabel numCredLB2;
+    private javax.swing.JLabel titMatLB;
     // End of variables declaration//GEN-END:variables
 }
