@@ -70,7 +70,7 @@
                                           <Component id="mat8" min="-2" max="-2" attributes="0"/>
                                           <Component id="mat7" min="-2" max="-2" attributes="0"/>
                                           <Component id="mat9" min="-2" max="-2" attributes="0"/>
-                                          <Component id="mat11" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mat6" min="-2" max="-2" attributes="0"/>
                                           <Component id="mat10" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -119,7 +119,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="mat11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="mat6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="mat5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -210,12 +210,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mat8ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="mat11">
+        <Component class="javax.swing.JRadioButton" name="mat6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Programaci&#xf3;n II"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mat11ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mat6ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="mat10">

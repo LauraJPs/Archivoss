@@ -17,6 +17,7 @@ public class formMaterias extends javax.swing.JFrame {
      */
     
     public formMaterias() {
+        
         initComponents();
         botonGrupMat.add(mat1);
         botonGrupMat.add(mat2);
@@ -27,7 +28,7 @@ public class formMaterias extends javax.swing.JFrame {
         botonGrupMat.add(mat8);
         botonGrupMat.add(mat9);
         botonGrupMat.add(mat10);
-        botonGrupMat.add(mat11);
+        botonGrupMat.add(mat6);
         
     }
     
@@ -54,7 +55,7 @@ public class formMaterias extends javax.swing.JFrame {
         mat9 = new javax.swing.JRadioButton();
         mat7 = new javax.swing.JRadioButton();
         mat8 = new javax.swing.JRadioButton();
-        mat11 = new javax.swing.JRadioButton();
+        mat6 = new javax.swing.JRadioButton();
         mat10 = new javax.swing.JRadioButton();
         siguienteBT = new javax.swing.JButton();
         terminarBT = new javax.swing.JButton();
@@ -118,10 +119,10 @@ public class formMaterias extends javax.swing.JFrame {
             }
         });
 
-        mat11.setText("Programación II");
-        mat11.addActionListener(new java.awt.event.ActionListener() {
+        mat6.setText("Programación II");
+        mat6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mat11ActionPerformed(evt);
+                mat6ActionPerformed(evt);
             }
         });
 
@@ -169,7 +170,7 @@ public class formMaterias extends javax.swing.JFrame {
                                         .addComponent(mat8)
                                         .addComponent(mat7)
                                         .addComponent(mat9)
-                                        .addComponent(mat11)
+                                        .addComponent(mat6)
                                         .addComponent(mat10))))
                             .addComponent(jLabel1))
                         .addContainerGap(111, Short.MAX_VALUE))
@@ -205,7 +206,7 @@ public class formMaterias extends javax.swing.JFrame {
                     .addComponent(mat4))
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mat11)
+                    .addComponent(mat6)
                     .addComponent(mat5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -262,17 +263,36 @@ public class formMaterias extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mat8ActionPerformed
 
-    private void mat11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat11ActionPerformed
+    private void mat6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mat11ActionPerformed
+    }//GEN-LAST:event_mat6ActionPerformed
 
     private void mat10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mat10ActionPerformed
 
     private void siguienteBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBTActionPerformed
-        
-        Materia mat=new Materia();
+        Materias materia= new Materias();
+        if(mat1.isSelected()){
+            materia.setNombreMat("Calculo Integral");          
+        }
+        if(mat2.isSelected()){
+            materia.setNombreMat("Ciudadania");          
+        }
+        if(mat3.isSelected()){
+            materia.setNombreMat("Lectura Crítica");          
+        }
+        if(mat4.isSelected()){
+            materia.setNombreMat("Fisica 2");          
+        }
+        if(mat5.isSelected()){
+            materia.setNombreMat("Ingles 1");          
+        }
+        if(mat6.isSelected()){
+            materia.setNombreMat("Programación 2");          
+        }
+       materia.getNombreMat();
+       Materia mat=new Materia(materia);
        this.setVisible(false);
        mat.setVisible(true);
        
@@ -331,11 +351,11 @@ public class formMaterias extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton mat1;
     private javax.swing.JRadioButton mat10;
-    private javax.swing.JRadioButton mat11;
     private javax.swing.JRadioButton mat2;
     private javax.swing.JRadioButton mat3;
     private javax.swing.JRadioButton mat4;
     private javax.swing.JRadioButton mat5;
+    private javax.swing.JRadioButton mat6;
     private javax.swing.JRadioButton mat7;
     private javax.swing.JRadioButton mat8;
     private javax.swing.JRadioButton mat9;
