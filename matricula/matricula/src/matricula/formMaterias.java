@@ -24,10 +24,6 @@ public class formMaterias extends javax.swing.JFrame {
         botonGrupMat.add(mat3);
         botonGrupMat.add(mat4);
         botonGrupMat.add(mat5);
-        botonGrupMat.add(mat7);
-        botonGrupMat.add(mat8);
-        botonGrupMat.add(mat9);
-        botonGrupMat.add(mat10);
         botonGrupMat.add(mat6);
         
     }
@@ -52,11 +48,7 @@ public class formMaterias extends javax.swing.JFrame {
         mat4 = new javax.swing.JRadioButton();
         mat5 = new javax.swing.JRadioButton();
         mat3 = new javax.swing.JRadioButton();
-        mat9 = new javax.swing.JRadioButton();
-        mat7 = new javax.swing.JRadioButton();
-        mat8 = new javax.swing.JRadioButton();
         mat6 = new javax.swing.JRadioButton();
-        mat10 = new javax.swing.JRadioButton();
         siguienteBT = new javax.swing.JButton();
         terminarBT = new javax.swing.JButton();
 
@@ -98,38 +90,10 @@ public class formMaterias extends javax.swing.JFrame {
 
         mat3.setText("Física II");
 
-        mat9.setText("Programación II");
-        mat9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mat9ActionPerformed(evt);
-            }
-        });
-
-        mat7.setText("NomMateria");
-        mat7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mat7ActionPerformed(evt);
-            }
-        });
-
-        mat8.setText("Programación II");
-        mat8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mat8ActionPerformed(evt);
-            }
-        });
-
         mat6.setText("Programación II");
         mat6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mat6ActionPerformed(evt);
-            }
-        });
-
-        mat10.setText("Programación II");
-        mat10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mat10ActionPerformed(evt);
             }
         });
 
@@ -154,32 +118,25 @@ public class formMaterias extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(terminarBT)
+                            .addGap(246, 246, 246)
+                            .addComponent(siguienteBT))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(mat1)
-                                        .addComponent(mat3)
-                                        .addComponent(mat5)
-                                        .addComponent(mat4)
-                                        .addComponent(mat2))
-                                    .addGap(128, 128, 128)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(mat8)
-                                        .addComponent(mat7)
-                                        .addComponent(mat9)
-                                        .addComponent(mat6)
-                                        .addComponent(mat10))))
-                            .addComponent(jLabel1))
-                        .addContainerGap(111, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(terminarBT)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(siguienteBT)
-                        .addGap(64, 64, 64))))
+                                .addComponent(mat1)
+                                .addComponent(mat3)
+                                .addComponent(mat2))
+                            .addGap(149, 149, 149)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(mat4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(mat5, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(mat6, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,28 +148,24 @@ public class formMaterias extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mat1)
-                    .addComponent(mat7))
-                .addGap(18, 18, 18)
+                    .addComponent(mat4))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mat2)
-                    .addComponent(mat8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mat9)
-                    .addComponent(mat3, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mat10)
-                    .addComponent(mat4))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mat6)
                     .addComponent(mat5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(terminarBT)
-                    .addComponent(siguienteBT))
-                .addGap(36, 36, 36))
+                    .addComponent(mat3)
+                    .addComponent(mat6))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(terminarBT)
+                        .addGap(81, 81, 81))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(siguienteBT)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -251,25 +204,9 @@ public class formMaterias extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mat5ActionPerformed
 
-    private void mat9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mat9ActionPerformed
-
-    private void mat7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mat7ActionPerformed
-
-    private void mat8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mat8ActionPerformed
-
     private void mat6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mat6ActionPerformed
-
-    private void mat10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mat10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mat10ActionPerformed
 
     private void siguienteBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBTActionPerformed
         Materias materia= new Materias();
@@ -293,6 +230,7 @@ public class formMaterias extends javax.swing.JFrame {
         }
        materia.getNombreMat();
        Materia mat=new Materia(materia);
+       
        this.setVisible(false);
        mat.setVisible(true);
        
@@ -350,15 +288,11 @@ public class formMaterias extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton mat1;
-    private javax.swing.JRadioButton mat10;
     private javax.swing.JRadioButton mat2;
     private javax.swing.JRadioButton mat3;
     private javax.swing.JRadioButton mat4;
     private javax.swing.JRadioButton mat5;
     private javax.swing.JRadioButton mat6;
-    private javax.swing.JRadioButton mat7;
-    private javax.swing.JRadioButton mat8;
-    private javax.swing.JRadioButton mat9;
     private javax.swing.JButton siguienteBT;
     private javax.swing.JButton terminarBT;
     // End of variables declaration//GEN-END:variables
